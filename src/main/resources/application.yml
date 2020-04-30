@@ -1,0 +1,3 @@
+demo:
+  application-version: ${applicationVersion}
+  build-parent-version: ${buildParentVersion}

@@ -48,7 +48,7 @@ fun getImplementationVersion(): String? {
 }
 
 fun getSelfJarPath(): String? {
-	val resource = DemoApplication::class.java.getResource("/")
+	val resource = DemoApplication::class.java.protectionDomain.codeSource.location
 
 	if (resource.protocol.toLowerCase() != "jar" || !resource.path.matches(Regex("^file:/[^!]+!/.*$"))) {
 		return null
